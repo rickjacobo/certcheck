@@ -21,3 +21,14 @@ The following example will get SSL certificate expiration for news.google.com
 ````
 http://127.0.0.1/certcheck/news.google.com
 ````
+
+### Via PowerShell
+````
+Invoke-RestMethod -Uri http://127.0.0.1/certcheck/<fqdn>
+````
+
+#### Example
+The following example will get SSL certificate expiration for news.google.com
+````
+Invoke-RestMethod -Uri http://127.0.0.1/certcheck/news.google.com
+````
