@@ -1,7 +1,15 @@
-FROM mcr.microsoft.com/powershell:alpine-3.10
-RUN apk add --no-cache mysql-client
-RUN apk add --no-cache openssl
+FROM mcr.microsoft.com/powershell:ubuntu-20.04
+
+EXPOSE 80
+
+ENV ENV_ROUTE="api"
+
+RUN apt update
+RUN apt install vim -y
+RUN apt install openssl -y
+
 RUN mkdir /powershell
 WORKDIR /powershell
-COPY Start-CertCheck.ps1 /powershell
-CMD pwsh Start-CertCheck.ps1
+COPY powershell.ps1 /powershell
+COPY handler.ps1 /powershell
+CMD pwsh ./handler.ps1
