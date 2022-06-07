@@ -38,7 +38,7 @@ $Date = "$Month" + "/" + "$Day" + "/" + "$Year"
 
 [PSCustomObject] @{
     URL = "$FQDN"
-    'Expires(Days)' = "$DaysUntilExpiration"
+    'Expires' = "$DaysUntilExpiration"
     Date = "$Date"
 }
 
