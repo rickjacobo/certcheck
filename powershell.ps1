@@ -37,9 +37,9 @@ if ($Month -eq "Dec"){$Month = "12"}
 $Date = "$Month" + "/" + "$Day" + "/" + "$Year"
 
 [PSCustomObject] @{
-    URL = "$FQDN"
-    'Expires' = "$DaysUntilExpiration"
-    Date = "$Date"
+URL = "$FQDN"
+Expires = "$DaysUntilExpiration"
+Date = "$Date"
 }
 
 }
